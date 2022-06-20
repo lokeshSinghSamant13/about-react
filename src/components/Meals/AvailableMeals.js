@@ -12,7 +12,7 @@ const AvailableMeals = () => {
     const fetchMeals = async () => {
       // setIsLoading(true);
       const response = await fetch(
-        "https://angular-tutotial-c19e0.firebaseio.com/meals.json"
+        "https://your-project-url.com//meals.json"
       );
       if (!response.ok) {
         throw new Error("Something went wrong!");

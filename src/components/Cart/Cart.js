@@ -27,7 +27,7 @@ const Cart = (props) => {
 
   const submitOrderHandler = async (userData) => {
     setIsSubmitting(true);
-    await fetch("https://angular-tutotial-c19e0.firebaseio.com/orders.json", {
+    await fetch("https://your-project-url.com/orders.json", {
       method: "POST",
       body: JSON.stringify({
         user: userData,
