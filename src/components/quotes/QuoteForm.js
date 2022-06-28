@@ -1,12 +1,12 @@
 import { Fragment, useRef, useState } from "react";
-import { Prompt } from "react-router-dom";
+// import { Prompt } from 'react-router-dom';
 
 import Card from "../UI/Card";
 import LoadingSpinner from "../UI/LoadingSpinner";
 import classes from "./QuoteForm.module.css";
 
 const QuoteForm = (props) => {
-  const [isEntering, setIsEntered] = useState(false);
+  const [isEntering, setIsEntering] = useState(false);
 
   const authorInputRef = useRef();
   const textInputRef = useRef();
@@ -23,21 +23,22 @@ const QuoteForm = (props) => {
   }
 
   const finishEnteringHandler = () => {
-    setIsEntered(false);
+    setIsEntering(false);
   };
 
   const formFocusedHandler = () => {
-    setIsEntered(true);
+    setIsEntering(true);
   };
 
   return (
     <Fragment>
-      <Prompt
+      {/* Prompt is currently not supported yet by v6 */}
+      {/* <Prompt
         when={isEntering}
-        message={(loction) =>
-          "Are you sure you want tot leave? All your entered data will be lost!"
+        message={(location) =>
+          'Are you sure you want to leave? All your entered data will be lost!'
         }
-      />
+      /> */}
       <Card>
         <form
           onFocus={formFocusedHandler}
